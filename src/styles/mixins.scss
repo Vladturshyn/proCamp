@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+      @media only screen and (max-width: $small) { @content; }
+    }
+    @else if $media == tablet {
+      @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+    }
+    @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    }
+  }
+
+  //animations
+
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }

@@ -1,0 +1,80 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.search-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: $container-max-width;
+    background-color: #fff;
+  
+    input[type='text'] {
+      padding: 10px 15px;
+      width: 100%;
+      border: none;
+    }
+  
+    input[type='text']:focus {
+      outline: none;
+    }
+  }
+  
+  
+  header {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    margin-bottom: 10px;
+    top: 0px;
+    z-index: 99;
+  }
+  
+  .header {
+    position: relative;
+    top: 60px;
+  
+    &-top-line {
+      min-height: 25px;
+      background-color: $color-primary-dark;
+    }
+  
+    &-line {
+      padding: 15px 0px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+      min-height: 80px;
+      background: linear-gradient(-45deg, #d03def, #e43fb2, #23A6D5, #5e35b1);
+      background-size: 400% 400%;
+      -webkit-animation: Gradient 30s ease infinite;
+      -moz-animation: Gradient 30s ease infinite;
+      animation: Gradient 30s ease infinite;
+    }
+  
+    &-bootom-line {
+      top: 0;
+      left: 0;
+      position: relative;
+      z-index: -1;
+      background-color: #fff;
+      -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease-out;
+  
+      &.hide {
+        top: -36px;
+        left: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-in;
+      }
+  
+    }
+  
+    h1 {
+      font-size: 25px;
+    }
+  }
