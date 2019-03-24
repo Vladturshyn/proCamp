@@ -10,9 +10,9 @@ const CardsEditModal = ({ data, handleModalClose, submitChanges }) => (
         &times;
       </span>
       <div className="short-card-wrapper">
-        {data.img && (
+        {data.poster_path && (
           <div className="short-card__img">
-            <img src={data.img} alt="img" />
+             <img src={`https://image.tmdb.org/t/p/w185/${data.poster_path}`} alt="img" />
           </div>
         )}
         <div className="short-card__info">
@@ -20,7 +20,7 @@ const CardsEditModal = ({ data, handleModalClose, submitChanges }) => (
               <input name="dataTitle" defaultValue={data.title} type="text" />
               <textarea
                 name="dataDescription"
-                defaultValue={data.description}
+                defaultValue={data.overview}
                 type="text"
               />
             <Button onClick={submitChanges} text={words.save} className={'--margin'}/>

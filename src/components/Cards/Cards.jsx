@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import CardsItem from './CardsItem';
+import PropTypes from 'prop-types';
 import CardsEditModal from './CardsEditModal';
-import data from '../../data/index.js';
+import CardsItem from './CardsItem';
+import { connect } from 'react-redux';
+import { fetchMovies } from '../../actions/movieAction';
 import './card.scss';
 
-export default class Cards extends Component {
-  state = {
-    modalShow: false,
-    id: ''
-  };
+class Cards extends Component {
+  state={
+    id:'',
+    modalShow: false
+  }
+  componentDidMount(){
+    this.props.fetchMovies();
+  }
 
   showInfo = id => {
     this.setState({
@@ -25,12 +30,14 @@ export default class Cards extends Component {
 
   submitChanges = e => {
     const { id } = this.state;
+    const {results} = this.props;
+
     e.preventDefault();
     const editForm = document.getElementById('editForm');
-    data.map(element => {
+    results.map(element => {
       if (element.id === id) {
         element.title = editForm.dataTitle.value;
-        element.description = editForm.dataDescription.value;
+        element.overview = editForm.dataDescription.value;
       }
       return null;
     });
@@ -38,18 +45,41 @@ export default class Cards extends Component {
   };
 
   render() {
-    const { id, modalShow } = this.state;
+    const {results} = this.props;
+    const {id, modalShow} = this.state;
     return (
       <>
-        <CardsItem data={data} showInfo={this.showInfo} />
+        {results ? <CardsItem data={results} showInfo={this.showInfo}/> : <div>Loading ... </div>} 
         {modalShow && (
           <CardsEditModal
             handleModalClose={this.handleModalClose}
             submitChanges={this.submitChanges}
-            data={data.find(el => el.id === id)}
+            data={results.find(el => el.id === id)}
           />
         )}
       </>
     );
   }
 }
+
+Cards.propTypes = {
+  results: PropTypes.array.isRequired,
+  fetchMovies: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = state => {
+  return {
+    results: state.movie.results,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchMovies: () => dispatch(fetchMovies()),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Cards);
