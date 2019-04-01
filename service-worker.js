@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/proCamp/precache-manifest.243d824128cef4d482ecf89cce59093c.js"
+  "/proCamp/precache-manifest.42bf0f0c19c6b259cd8ea900709abce5.js"
 );
 
 workbox.clientsClaim();
