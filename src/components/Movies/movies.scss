@@ -148,6 +148,13 @@
     resize: none;
     outline: none;
     margin-bottom: 5px;
+    @include respond-to(tablet) {
+      width: 90%;
+     }
+   
+     @include respond-to(mobile) {
+      width: 90%;
+     }
   }
   input {
     width: 100%;
@@ -160,5 +167,12 @@
     outline: none;
     margin-bottom: 7px;
     margin-top: 5px;
+    @include respond-to(tablet) {
+      width: 90%;
+     }
+   
+     @include respond-to(mobile) {
+      width: 90%;
+     }
   }
 }
