@@ -16,7 +16,14 @@ export const appReducer = (state = initialState, action) => {
       return {
         ...state
       };
-
+    case actionTypes.EDIT_MOVIE:
+     const index = state.results.findIndex(film => film.id.toString() === action.obj.id);
+      if(!(index === -1)) {
+          state.results[index] = {...state.results[index],...action.obj};
+       }
+    return {
+      ...state
+    };
     default:
       return initialState;
   }

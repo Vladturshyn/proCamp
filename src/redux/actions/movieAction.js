@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import ServiceApi from '../service';
+import ServiceApi from '../../service';
 
 
 export const fetchMovies = () => {
@@ -25,6 +25,7 @@ export const fetchMovieRequest = () => {
   };
 };
 
+
 export const fetchMovieSuccess = (data) => {
   return {
     type: actionTypes.FETCH_MOVIE_SUCCESS,
@@ -38,3 +39,10 @@ export const fetchMovieFailed = error => {
     error,
   };
 };
+
+export const editFilmData = (obj) => {
+  return{
+    type: actionTypes.EDIT_MOVIE,
+    obj
+  }
+}

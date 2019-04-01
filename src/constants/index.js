@@ -1,5 +1,11 @@
 export const words = {
-    save: 'СОХРАНИТЬ',
-    exit: 'ВЫЙТИ',
-    edit: 'РЕДАКТИРОВАТЬ'
+    save: 'Save',
+    exit: 'Exit',
+    edit: 'Edit',
+    loading: 'Loading ...',
+    previous: 'Previous',
+    title: 'Title: ',
+    ReleaseDate: 'Release date: ',
+    OriginalLanguage: 'Original language: ',
+    dashboard: 'Dashboard'
 }
