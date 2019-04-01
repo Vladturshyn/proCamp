@@ -1,14 +1,14 @@
 {
-  "main.css": "/proCamp/dashboard/static/css/main.16b396a9.chunk.css",
-  "main.js": "/proCamp/dashboard/static/js/main.7d93e564.chunk.js",
-  "main.js.map": "/proCamp/dashboard/static/js/main.7d93e564.chunk.js.map",
-  "runtime~main.js": "/proCamp/dashboard/static/js/runtime~main.8c4490c5.js",
-  "runtime~main.js.map": "/proCamp/dashboard/static/js/runtime~main.8c4490c5.js.map",
-  "static/js/2.2c530768.chunk.js": "/proCamp/dashboard/static/js/2.2c530768.chunk.js",
-  "static/js/2.2c530768.chunk.js.map": "/proCamp/dashboard/static/js/2.2c530768.chunk.js.map",
-  "index.html": "/proCamp/dashboard/index.html",
-  "precache-manifest.abf45bfb2ea3e80f570deffa36994eec.js": "/proCamp/dashboard/precache-manifest.abf45bfb2ea3e80f570deffa36994eec.js",
-  "service-worker.js": "/proCamp/dashboard/service-worker.js",
-  "static/css/main.16b396a9.chunk.css.map": "/proCamp/dashboard/static/css/main.16b396a9.chunk.css.map",
-  "static/media/logo.png": "/proCamp/dashboard/static/media/logo.226be7e0.png"
+  "main.css": "/proCamp/static/css/main.16b396a9.chunk.css",
+  "main.js": "/proCamp/static/js/main.7d93e564.chunk.js",
+  "main.js.map": "/proCamp/static/js/main.7d93e564.chunk.js.map",
+  "runtime~main.js": "/proCamp/static/js/runtime~main.a7d5dfaa.js",
+  "runtime~main.js.map": "/proCamp/static/js/runtime~main.a7d5dfaa.js.map",
+  "static/js/2.2c530768.chunk.js": "/proCamp/static/js/2.2c530768.chunk.js",
+  "static/js/2.2c530768.chunk.js.map": "/proCamp/static/js/2.2c530768.chunk.js.map",
+  "index.html": "/proCamp/index.html",
+  "precache-manifest.338fa66113d21f06edd880a317c5089c.js": "/proCamp/precache-manifest.338fa66113d21f06edd880a317c5089c.js",
+  "service-worker.js": "/proCamp/service-worker.js",
+  "static/css/main.16b396a9.chunk.css.map": "/proCamp/static/css/main.16b396a9.chunk.css.map",
+  "static/media/logo.png": "/proCamp/static/media/logo.226be7e0.png"
 }
